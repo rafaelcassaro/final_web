@@ -1,0 +1,57 @@
+/*Nome:Rafael Cassaro Costa
+  Código de matricula: 834706
+*/
+
+/*centralização da pagina*/
+#principal{
+    width: 800px;
+    padding: 50px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    border-style: solid;
+    margin-top: 150px;
+}
+
+/*aumento da fonte do titulo*/
+h1{
+    font-size: 25px;
+    text-align: center;
+}
+
+/*estilizar botão de ACESSO*/
+#botao{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 362px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/*centralização dos quadros de respostas*/
+pre{
+    text-align: center;
+}
+
+/*estilização do efeito HOVER, em "esqueceu a senha" */
+p:hover ~ span {
+    display: block;
+}
+  
+span {
+    display: none;
+    color: #fff;
+    background-color: red;
+    width: 15%;
+    padding: 10px;
+    border-radius: 4px;
+    position: fixed;
+}
+
+/*mudança da cor de fundo da pagina*/
+body{
+    background: rgb(223, 221, 252);
+}

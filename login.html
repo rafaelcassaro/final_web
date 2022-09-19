@@ -1,0 +1,53 @@
+<!-- Nome:Rafael Cassaro Costa
+     Código de matricula: 834706-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+    <!-- funcao1: mostra uma caixa de mensagem caso alguma dos dois quadros de resposta nao sejam preenchidos-->
+    <script language="Javascript">
+
+        function funcao1(){
+            cmpo1 = document.getElementById("abc");
+            cmpo2 = document.getElementById("abc2");
+            if(cmpo1.value==false || cmpo2.value==false){
+              alert("Campos são obrigatórios!");}
+            else if(cmpo1.value!=false && cmpo2.value!=false){
+            window.location.href = "file:///C:/Users/rafael/Desktop/final_web/policial.html"; 
+              }
+        }
+
+    </script>
+</head>
+<body >
+<main>
+    <!--centralização da pagina pelo css_id:Principal--> 
+    <div id="principal">
+    <header>    <h1>EFETUE O LOGIN </h1><hr>
+    </header>
+        <form name=form1>
+        <pre>
+        <section><!--quadros de resposta-->
+        MÁTRICULA:   <input name="plc" id="abc"  onblur="checa()" type="text">
+        SENHA    :   <input name="identf"  type="password" id="abc2" onblur="checa2()">
+        </pre>
+    </form>
+        <button onclick="funcao1()" id="botao">ACESSAR</button> 
+    </section>
+        <div>
+            <!--quadrado para lembrar senha, e informação escondida(efeito css_hover) para recuperação da senha-->
+    <article>
+        <input type="checkbox" id="senha_box" name="senha_box">
+        <label for="senha_box">LEMBRAR USUARIO </label>
+        </div>
+        <p style="color: blue;">Esqueceu a senha?</p>
+        <span>Vá ao departamento de transito da prefeitura</span>
+    </article>
+    </div>
+</main>
+</body>
+</html>

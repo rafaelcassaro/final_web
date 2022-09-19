@@ -1,0 +1,98 @@
+<!-- Nome:Rafael Cassaro Costa
+     Código de matricula: 834706-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/menu_principal.css">
+    <!-- Função checa: exibir mensagem "obrigatoria" caso o usuario não escreva quando clicar nos quadrados de resposta
+        Funcao1: aparece uma caixa de mensagem, caso o usuario n digite no quadro de resposta, e outra caixa de mensagem quando pesquisa a multa no sistema
+        mostra os dados da multa e mostra os 2 botoes relacionado ao recurso, APOS ACHAR A MULTA NO SISTEMA
+        funcao recurso: aparece uma caixa de mensagem ao requisitar recurso
+    -->
+
+    <script language="Javascript">
+        function checa(){
+        d = document.getElementById("ctn");
+        campo = document.getElementById("abc");
+        if (campo.value== false ){
+            d.innerText="Este campo é obrigatório";}
+            else{
+            d.innerText="";}
+        }
+
+        function checa2(){
+        d = document.getElementById("ctn2");
+        campo = document.getElementById("abc2");
+        if (campo.value==""){
+            d.innerText="Este campo é obrigatório";}
+            else{
+            d.innerText=" ";}
+        }
+
+        function recurso() {
+        alert("Recurso enviado!");
+        }
+
+        function funcao1(){
+            cmpo1 = document.getElementById("abc");
+            cmpo2 = document.getElementById("abc2");
+
+            // dados da multa "printf", e botoes dos recursos        
+            var titlo = "Nª_Multa: 0000000000-00<br>Placa_Veiculo: XXX-0000<br>Data_Multa: 00/00/0000<br>Hora_Multa: 00:00<br>Id_policial: 00000000<br>";
+            var a = "INFRAÇÃO<br>Codigo: 0000000<br>Descrição: Xxxxxxxxxxxxx<br>Valor: R$000,00<br>Pontuação_Carteira: 00";
+            var b = "<a href=file:///C:/Users/rafael/Desktop/final_web/recurso.html><button>Visualizar</button></a> <button onclick= recurso() >Entrar</button>";
+            var c = "<br>Entrar com Recurso"
+
+            if(cmpo1.value==false || cmpo2.value==false){
+              alert("Campos são obrigatórios!");}
+            else if(cmpo1.value!=false && cmpo2.value!=false){
+            alert("Procurando multa! ");
+            document.getElementById("titulomulta").innerHTML = titlo;
+            document.getElementById("infrc").innerHTML = a;
+            document.getElementById("rec_titulo").innerHTML = c;
+            document.getElementById("botao_rec").innerHTML = b;
+            }
+        }
+
+    </script>
+</head>
+<body >
+
+
+     <!--barra guia superior do site com acesso para area restrita, mais centralização da pagina pelo css_id:Principal-->    
+    <div id="home"><a href="C:\Users\rafael\Desktop\final_web\login.html">Area Restrita</a></div>
+<main>
+        <div id="principal">
+        <header><h1>Visualize sua multa </h1><hr>
+        </header>
+        <section> 
+        <form name=form1>
+        <pre>
+          <!--quadros de resposta-->
+        Placa do veículo(Digite:xxx0000):   <input name="plc" id="abc" required="true" onblur="checa()" type="text"><div style="color: red; display: inline;" id="ctn"></div>
+        Nª de identificação da multa    :   <input name="identf" required="true"  type="number"id="abc2" onblur="checa2()"><div style="color: red; display: inline;" id="ctn2"></div>
+        </pre>
+        </form>
+        </section>
+        <input type="submit" id="botao" onclick="funcao1()" >
+        <hr>
+
+        <!-- TEXTOS DAS MULTAS -->
+        <section><h2 >Multa</h2 >
+        <p id="titulomulta" ></p>
+        <p id="infrc"></p>
+        </section>
+
+        <!--botoes dos "recursos"-->
+        <section>
+        <h3><p id="rec_titulo"></p></h3>
+        <p id="botao_rec"></p>
+        <hr>
+        </section>
+    </div>
+</main>>
+</body>
+</html>

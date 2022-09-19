@@ -1,0 +1,59 @@
+<!-- Nome:Rafael Cassaro Costa
+     Código de matricula: 834706-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Interna</title>
+    <link rel="stylesheet" type="text/css" href="css/policial.css">
+
+    <!-- funcao1: Exibe uma caixa de mensagem caso alguma informação n seja preenchida, até que todas as informações sejam preenchidas
+    -->
+    <script language="Javascript">
+ 
+        function funcao1(){
+            cmpo1 = document.getElementById("abc");
+            if(cmpo1.value==false){
+              alert("Campos são obrigatórios!");}
+        }
+
+    </script>
+</head>
+<body >
+<main>
+
+        <!--centralização da pagina pelo css_id:Principal-->
+         <div id="principal">
+<header>   <!--dados do usuario -->
+        <h1>APLICAÇÃO DE MULTA</h1><hr>
+</header>
+<article>
+        <h2 >Usuario</h2 >
+<figure>
+        <img width="15%" height="15%" src="imagens/boneco.png"><br>
+</figure>
+        Matricula       : 00000000 <br>
+        Nome            : xxxxxxxx xxxx xxxxx<br>
+        Patente         : xxxxxxxxx<br>
+        Data de Admissão: 00/00/0000<br>
+        <hr>
+</article>
+<article>
+        <h2 >Cadastro da multa</h2 >
+
+            <!--dados a serem registrados, da multa-->
+        <form name=form1>
+        PLACA DO VEICULO(Digite:xxx0000):<input name="plc1" id="abc" required="true"  type="text"><br>
+        DATA DA MULTA:                   <input name="plc2" id="abc" required="true"  type="date"><br>
+        HORA DA MULTA:                   <input name="plc3" id="abc" required="true"  type="time"><br>
+        CÓDIGO DA INFRAÇÃO:              <input name="plc4" id="abc" required="true"  type="number"><br>
+    
+        <input type="submit" id="botao" onclick="funcao1()" >
+        </form>
+</article>
+        <hr>
+</main>
+    </div>
+</body>
+</html>
